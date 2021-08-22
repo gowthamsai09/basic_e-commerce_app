@@ -1,4 +1,5 @@
-import 'package:e_commerce/screens/splash.dart';
+import 'package:e_commerce/screens/authentication/login.dart';
+
 import 'package:flutter/material.dart';
 
 Future <void> main() async{
@@ -23,7 +24,7 @@ class _HomepageState extends State<Homepage> {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: spalsh(),
+      home: LoginPage(),
     );
   }
 }

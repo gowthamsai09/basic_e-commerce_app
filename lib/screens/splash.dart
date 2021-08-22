@@ -1,32 +1,30 @@
-import 'package:e_commerce/main.dart';
-import 'package:e_commerce/screens/authentication/login.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:flutter/material.dart';
 
-class spalsh extends StatefulWidget {
-  const spalsh({Key key}) : super(key: key);
+class Splashscreen extends StatefulWidget {
+  const Splashscreen({Key key}) : super(key: key);
 
   @override
-  _spalshState createState() => _spalshState();
+  _SplashscreenState createState() => _SplashscreenState();
 }
 
-class _spalshState extends State<spalsh> {
-  FirebaseAuth auth = FirebaseAuth.instance;
+class _SplashscreenState extends State<Splashscreen> {
+ //FirebaseAuth auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 2), () {
-      if (auth.currentUser == null) {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
-                (route) => false);
-      } else {
-        Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(builder: (context) => Homepage()),
-                (route) => false);
-      }
+    Future.delayed(const Duration(seconds: 5), () {
+      // if (auth.currentUser == null) {
+      //   Navigator.pushAndRemoveUntil(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => LoginPage()),
+      //           (route) => false);
+      // } else {
+      //   Navigator.pushAndRemoveUntil(
+      //       context,
+      //       MaterialPageRoute(builder: (context) => Homepage()),
+      //           (route) => false);
+      // }
     });
     return Scaffold(
         body: Stack(
